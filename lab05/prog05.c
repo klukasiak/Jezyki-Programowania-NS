@@ -2,7 +2,7 @@
 
 void prostokat(int szer, int wys);
 void owal(int szer);
-void strzalka();
+void strzalka(int wys);
 void diament();
 
 int main(){
@@ -38,24 +38,32 @@ void prostokat(int szer, int wys){
 }
 
 void owal(int szer){
-	int l = 0;
-	int z = 0;
-	if(szer%2==0){
-		l = (szer/2-1);
-		for(int i = 1; i<=szer; i++){
-			if(i == 1 || i == szer){
-				while(z<l){
-					printf(" ");
-					z++;
-				}
-				printf("**");
-			}else{
-				printf("*");
-				while(z<szer){
-					printf(" ");
-									}
-			}
-			printf("\n");
+	// conajmniej 4 jednostki tylko parzyste
+	int s;
+	int z = 1;
+	s = szer/2;
+	for(int i = 1; i<=szer; i++){
+		while(z<s){
+			printf(" ");
+			z++;
+		}
+		if(i==1 || i==szer) printf("**");
+		while(z<szer){
+			printf(" ");
+			z++;
+		}
+	printf("\n");
+	z = 1;
+	}
+}
+
+void strzalka(int wys){
+	int a = wys * 2 - 1;
+	for(int i = 1; i<= wys*2; i++){
+		if(i <= wys){
+			
 		}
 	}
+		
+	
 }
