@@ -38,14 +38,16 @@ void printMenu(){
 }
 
 void startGame(int max){
-	int liczba, input=0;
+	int liczba, input=0, proby=0;
 	liczba = rand()%max+1;
 	while(input!=liczba){
 		printf("%s%d%s\n", "Podaj liczbe z przedzialu <1,", max, "> :");
 		scanf("%d", &input);
 		if(input>liczba) printf("Za duzo :)\n");
 		else printf("Za malo :)\n");
+		proby++;
 	}
+	printf("%s%d","Ilosc prob: \n",proby);
 	posMessage();
 }
 
