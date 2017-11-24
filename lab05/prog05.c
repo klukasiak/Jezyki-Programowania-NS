@@ -1,3 +1,4 @@
+//niedokonczone
 #include <stdio.h>
 
 void prostokat(int szer, int wys);
