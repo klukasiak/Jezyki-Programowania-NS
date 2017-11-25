@@ -1,4 +1,7 @@
 #include <stdio.h>
+/*Krystian Łukasiak
+ * 25.11.2017
+*/
 void swap(int *a, int *b);
 
 int main(){
