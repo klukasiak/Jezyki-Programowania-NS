@@ -31,7 +31,7 @@ int main(){
 
 int sort(int *tab, int length){
 	int buf, bubbles=0, n=length;
-	while(n>0){
+	for(int j = length; j>0; j--){
 		for(int i = 0; i<length-1; i++){
 			if(tab[i]>tab[i+1]){
 				buf = tab[i];
@@ -40,7 +40,6 @@ int sort(int *tab, int length){
 				bubbles++;
 			}
 		}
-		n--;
 	}
 	return bubbles;
 }
