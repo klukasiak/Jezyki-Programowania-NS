@@ -38,7 +38,7 @@ int main() {
 	for (int i=0; i<30; i++)
 		printf("%d ", tab[i]);
  
-	mergesort(0,30-1, tab);
+	mergesort(0, 29, tab);
  
 	printf("\nZbior po sortowaniu:\n");
 	for (int i=0; i<30; i++)
