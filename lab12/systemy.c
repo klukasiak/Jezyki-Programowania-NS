@@ -1,5 +1,7 @@
 #include <stdio.h>
-
+/*
+ * Krystian Łukasiak 15.12.2017
+*/
 void zamiana(int liczba, int system);
 
 int main(){
