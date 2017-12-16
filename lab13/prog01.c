@@ -12,7 +12,8 @@ int main(int argc, char *argv[]){
 	}
 	srand(time(0));
 	for(int i = 0 ; i<10; i++){
-		fprintf (fout, "%.2f %.2f %.2d\n", a, a*a,  rand()%10+2);
+		double b = rand()%100;
+		fprintf (fout, "%.2f %.2f %.2f\n", a, a*a,  b/100);
 		a += 0.1;
 	}
 	fclose (fout);
