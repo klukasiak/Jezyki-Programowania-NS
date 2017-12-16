@@ -80,6 +80,8 @@ dkms.conf
 
 # Log file
 *.log
+*.txt
+*.dat
 
 # BlueJ files
 *.ctxt
