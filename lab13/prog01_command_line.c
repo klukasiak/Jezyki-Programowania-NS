@@ -6,7 +6,7 @@ int main(int argc, char *argv[]){
 	FILE *fout;
 	double a = 0.0;
 	if ((fout=fopen(argv[1], "w"))==NULL) {
-		printf ("Nie mogę otworzyć pliku test.txt do zapisu!\n");
+		printf ("Nie mogę otworzyć pliku do zapisu!\n");
 		return 1;
 	}
 	srand(time(0));
