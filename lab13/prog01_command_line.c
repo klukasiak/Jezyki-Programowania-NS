@@ -5,7 +5,6 @@
 int main(int argc, char *argv[]){
 	FILE *fout;
 	double a = 0.0;
-	char tekst[] = "Hello world";
 	if ((fout=fopen(argv[1], "w"))==NULL) {
 		printf ("Nie mogę otworzyć pliku test.txt do zapisu!\n");
 		return 1;
