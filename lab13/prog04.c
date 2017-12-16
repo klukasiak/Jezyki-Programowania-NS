@@ -25,12 +25,12 @@ int main(int argc, char *argv[]){
 	}
 	c = 'a';
 	for(int i = 0; i<26; i++){
-		fprintf(fout, "%c, %d\n", c, ilosc[i]);
+		fprintf(fout, "%c - %d\n", c, ilosc[i]);
 		c++;
 	}
 	c = 'A';
 	for(int i = 0; i<26; i++){
-		fprintf(fout, "%c, %d\n", c, ilosc2[i]);
+		fprintf(fout, "%c - %d\n", c, ilosc2[i]);
 		c++;
 	}
 	fclose (fout);
