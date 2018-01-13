@@ -42,12 +42,12 @@ int rectinrect(struct rect r1, struct rect r){
 int main(){
 	struct point p,p1,p2,p3;
 	struct rect r,r1;
-	p = makepoint(1,2);
+	p = makepoint(21,22);
 	p1 = makepoint(1,2);
 	p2 = makepoint(13,14);
-	p3 = makepoint(21,24);
+	p3 = makepoint(0,1);
 	r = makerect(p1,p2);
 	r1 = makerect(p3,p);
-	printf("%d\n", rectinrect(r1,r));
+	printf("%s\n", rectinrect(r1,r)?"zawarte":"niezawarte");
 	return 0;
 }
