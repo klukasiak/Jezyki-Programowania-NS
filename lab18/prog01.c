@@ -36,7 +36,7 @@ int ptinrect(struct point p, struct rect r) {
 
 int rectinrect(struct rect r1, struct rect r){
 	return (r1.ll.x > r.ll.x && r1.ll.y > r.ll.y && r1.ur.x < r.ur.x && r1.ur.y < r.ur.y) ||
-	(r1.ll.x < r.ll.x && r1.ll.y < r.ll.y && r1.ur.x > r.ur.x && r1.ur.y > r.ur.y) ;
+	(r1.ll.x < r.ll.x && r1.ll.y < r.ll.y && r1.ur.x > r.ur.x && r1.ur.y > r.ur.y);
 }
 
 int main(){
