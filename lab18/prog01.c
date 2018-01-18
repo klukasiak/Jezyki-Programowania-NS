@@ -1,6 +1,6 @@
 /*
  * Krystian Łukasiak
- * 08.01.2018
+ * 13.01.18
  */
 
 #include <stdio.h>
@@ -39,9 +39,25 @@ int rectinrect(struct rect r1, struct rect r){
 	(r1.ll.x < r.ll.x && r1.ll.y < r.ll.y && r1.ur.x > r.ur.x && r1.ur.y > r.ur.y);
 }
 
+struct rect minspan(struct rect r1, struct rect r2){
+	int minLlX, minLlY, maxUrX, maxUrY;
+	struct point ll1, ur1;
+	if(r1.ll.x<r2.ll.x) minLlX = r1.ll.x;
+	else minLlX = r2.ll.x;
+	if(r1.ll.y<r2.ll.y) minLlY = r1.ll.y;
+	else minLlY = r2.ll.y;
+	if(r1.ur.x>r2.ur.x) maxUrX = r1.ur.x;
+	else  maxUrX = r2.ur.x;
+	if(r1.ur.y>r2.ur.y) maxUrY = r1.ur.y;
+	else maxUrY = r2.ur.y;
+	ll1 = makepoint(minLlX, minLlY);
+	ur1 = makepoint(maxUrX, maxUrY);
+	return makerect(ll1, ur1);
+}
+
 int main(){
 	struct point p,p1,p2,p3;
-	struct rect r,r1;
+	struct rect r,r1,r2;
 	p = makepoint(21,22);
 	p1 = makepoint(1,2);
 	p2 = makepoint(13,14);
@@ -49,5 +65,7 @@ int main(){
 	r = makerect(p1,p2);
 	r1 = makerect(p3,p);
 	printf("%s\n", rectinrect(r1,r)?"zawarte":"niezawarte");
+	r2 = minspan(r1,r);
+	printf("(%d,%d) ; (%d,%d)\n", r2.ll.x, r2.ll.y, r2.ur.x, r2.ur.y);
 	return 0;
 }
