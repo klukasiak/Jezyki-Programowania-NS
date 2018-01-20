@@ -28,15 +28,11 @@ void permute(char *a, int l, int r)
    }
 }
  
-int main()
+int main(int argc, char *argv[])
 {
-    FILE *fin;
-	if ((fin=fopen("litery.txt", "r"))==NULL) {
-		printf ("Nie mogę otworzyć pliku ulysses.txt do odczytu!\n");
-		return 1;
-	}
+	if(argc <= 1) return 1;
 	char str[1000];
-	fscanf(fin, "%s", str);
+	strcpy(str, argv[1]);
     int n = strlen(str);
     permute(str, 0, n-1);
     return 0;
