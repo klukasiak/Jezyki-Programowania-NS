@@ -1,3 +1,6 @@
+/*
+ * Krystian Łukasiak 20.01.18
+ */
 #include <stdio.h>
 #include <string.h>
  
